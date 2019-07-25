@@ -1,8 +1,8 @@
 # Hadoop Cluster Setup
 ## System Prerequisites
 ## Ubuntu User And Role Setup
-## Java 8 JDK Installation
-## SSH Setup
+* [Java 8 JDK Installation](jdk/README.md)
+* [SSH Setup](.ssh/README.md)
 ## Core Configurations
 ## Environment Configurations
 ## Slave Configurations
