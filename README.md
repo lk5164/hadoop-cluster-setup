@@ -7,6 +7,7 @@
 ## Environment Configurations
 ## Slave Configurations
 ## HDFS Trouble Shooting
+    hadoop dfsadmin -report
 # Reference
 [Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
