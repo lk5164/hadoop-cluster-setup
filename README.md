@@ -8,7 +8,7 @@
 ## Slave Configurations
 ## HDFS Trouble Shooting
 # Reference
-[Cluster Setup] (https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
+[Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
 [core-site.xml properties](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/core-default.xml)
 
