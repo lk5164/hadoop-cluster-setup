@@ -16,6 +16,11 @@ Accoring to Ubuntu website, the 18.04.2 recommends,
     Internet access is helpful
 
 ## Ubuntu User And Role Setup
+Before starting hadoop installation, sudo group user needs to be created. Use following commands to create user hadoop and its privileges. Starting with a root account. 
+    
+    adduser hadoop
+    usermod -aG sudo username
+    
 * [Java 8 JDK Installation](jdk/README.md)
 * [SSH Setup](.ssh/README.md)
 ## Core Configurations
