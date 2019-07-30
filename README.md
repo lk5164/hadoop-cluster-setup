@@ -29,7 +29,23 @@ Next, a JDK and SSH needs to be installed and setup.
 * [Java 8 JDK Installation](jdk/README.md)
 * [SSH Setup](.ssh/README.md)
 
+Switch to hadoop user and create folders for name node, data node and logs. 
+
+    mkdir -p ~/hdfs/namenode && \ 
+        mkdir -p ~/hdfs/datanode && \
+        mkdir $HADOOP_HOME/logs
+        
 ## Core Configurations
+Replace with configurations files under hadoop folder with root user.
+
+    mv hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
+    mv hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \ 
+    mv core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
+    mv mapred-env.sh $HADOOP_HOME/etc/hadoop/mapred-env.sh && \
+    mv mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
+    mv yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
+    mv slaves $HADOOP_HOME/etc/hadoop/slaves
+    
 ## Environment Configurations
 ## Slave Configurations
 ## HDFS Trouble Shooting
