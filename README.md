@@ -93,7 +93,9 @@ A common problem is some of the nodes are not alive. Then ssh to the "dead" node
     jps
     
 edit and execute [my-single-start.sh](my-single-start.sh) to try to bring the missing ones alive.
-I am listing some common errors here with solutions.
+Then check relative logs under logs folder.
+
+Finally, I am listing some common errors here with solutions.
 For logs,
 * [Permission Denied for logs](https://askubuntu.com/questions/37786/permission-denied-errors-whe-starting-a-single-node-cluster-in-hadoop)
 For data nodes,
