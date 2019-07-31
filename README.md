@@ -28,7 +28,7 @@ Before starting hadoop installation, sudo group user needs to be created. Use fo
 Next, a JDK and SSH needs to be installed and setup. 
 * [Java 8 JDK Installation](jdk/README.md)
 * [SSH Setup](.ssh/README.md)
-* [Host Names Setup](hosts/README.md)
+* [Host Names Setup](root/README.md)
 
 ## Core Configurations
 Switch to hadoop user and create folders for name node, data node and logs. 
