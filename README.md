@@ -92,7 +92,15 @@ A common problem is some of the nodes are not alive. Then ssh to the "dead" node
 
     jps
     
-edit and execute [my-single-start.sh](my-single-start.sh) for the missing ones try to bring it alive. 
+edit and execute [my-single-start.sh](my-single-start.sh) to try to bring the missing ones alive.
+I am listing some common errors here with solutions.
+For logs,
+* [Permission Denied for logs](https://askubuntu.com/questions/37786/permission-denied-errors-whe-starting-a-single-node-cluster-in-hadoop)
+For data nodes,
+* [java.net.BindException: Problem binding to [0.0.0.0:50010] java.net.BindException](https://community.hortonworks.com/questions/50261/data-node-down-javanetbindexception-address-alread.html)
+* [All specified directories are failed to load](https://stackoverflow.com/questions/45142320/hadoop-exception-all-specified-directories-are-failed-to-load)
+* [Datanode not starts correctly
+](https://stackoverflow.com/questions/22316187/datanode-not-starts-correctly)
 # Reference
 [Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
