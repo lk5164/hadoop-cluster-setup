@@ -71,9 +71,28 @@ If everything configures correctly, you can start formatting name node which is 
 According to Hadoop website,
 
     -format [-clusterid cid]	Formats the specified NameNode. It starts the NameNode, formats it and then shut it down. Will throw NameNodeFormatException if name dir already exist and if reformat is disabled for cluster.
+
+After formatting, the cluster IP in [VERSION](datanode/README.md) file will be regenerated. 
+## Start Hadoop
+To start dfs,
+
+    start-dfs.sh
     
+To start yarn,
+
+    start-yarn.sh
+    
+Each step will start master node first, then start slave nodes. If you prefer to start/stop for a specific node for trouble shooting, try the [my-single-start.sh](my-single-start.sh) and [my-single-stop.sh](my-single-stop.sh)
 ## HDFS Trouble Shooting
+Trouble shooting hdfs can be tricky, you can start from using following command,
+
     hdfs dfsadmin -report
+    
+A common problem is some of the nodes are not alive. Then ssh to the "dead" node and execute,
+
+    jps
+    
+edit and execute [my-single-start.sh](my-single-start.sh) for the missing ones try to bring it alive. 
 # Reference
 [Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
