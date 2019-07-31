@@ -109,7 +109,9 @@ Then check relative logs under logs folder.
 Finally, I am listing some common errors here with solutions.
 For logs,
 * [Permission Denied for logs](https://askubuntu.com/questions/37786/permission-denied-errors-whe-starting-a-single-node-cluster-in-hadoop)
+
 For data nodes,
+
 * [java.net.BindException: Problem binding to [0.0.0.0:50010] java.net.BindException](https://community.hortonworks.com/questions/50261/data-node-down-javanetbindexception-address-alread.html)
 * [All specified directories are failed to load](https://stackoverflow.com/questions/45142320/hadoop-exception-all-specified-directories-are-failed-to-load)
 * [Datanode not starts correctly
