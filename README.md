@@ -85,7 +85,7 @@ According to Hadoop website,
 
 After formatting, the cluster IP in [VERSION](datanode/README.md) file will be regenerated. 
 ## Start Hadoop
-To start dfs,
+To start dfs, the simpliest approach would be use, 
 
     start-dfs.sh
     
@@ -93,7 +93,36 @@ To start yarn,
 
     start-yarn.sh
     
-Each step will start master node first, then start slave nodes. If you prefer to start/stop for a specific node for trouble shooting, try the [my-single-start.sh](my-single-start.sh) and [my-single-stop.sh](my-single-stop.sh)
+Each step will start master node first, then start slave nodes. If you prefer to start/stop for a specific node for trouble shooting purpose, try the [my-single-start.sh](my-single-start.sh) and [my-single-stop.sh](my-single-stop.sh)
+
+[my-single-start.sh](my-single-start.sh) lists steps in [hadoop website](https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html). 
+
+Start the HDFS NameNode - 
+
+    [hdfs]$ $HADOOP_PREFIX/sbin/hadoop-daemon.sh --config $HADOOP_CONF_DIR --script hdfs start namenode
+    
+Start the HDFS DataNode - 
+
+    [hdfs]$ $HADOOP_PREFIX/sbin/hadoop-daemons.sh --config $HADOOP_CONF_DIR --script hdfs start datanode
+    
+Start the YARN ResourceManager -
+    
+    [yarn]$ $HADOOP_YARN_HOME/sbin/yarn-daemon.sh --config $HADOOP_CONF_DIR start resourcemanager
+    
+Start the YARN NodeManager -
+
+    [yarn]$ $HADOOP_YARN_HOME/sbin/yarn-daemons.sh --config $HADOOP_CONF_DIR start nodemanager
+    
+Start a standalone WebAppProxy server - 
+
+    [yarn]$ $HADOOP_YARN_HOME/sbin/yarn-daemon.sh --config $HADOOP_CONF_DIR start proxyserver
+    
+Start the MapReduce JobHistory Server -
+
+    [mapred]$ $HADOOP_PREFIX/sbin/mr-jobhistory-daemon.sh --config $HADOOP_CONF_DIR start historyserver
+    
+Shutdown process follows the same order.     
+
 ## HDFS Trouble Shooting
 Trouble shooting hdfs can be tricky, you can start from using following command,
 
@@ -117,7 +146,7 @@ For data nodes,
 * [Datanode not starts correctly
 ](https://stackoverflow.com/questions/22316187/datanode-not-starts-correctly)
 # Reference
-[Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
+[Cluster Setup](https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
 [core-site.xml properties](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/core-default.xml)
 
