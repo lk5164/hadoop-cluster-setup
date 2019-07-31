@@ -2,7 +2,7 @@
 Environment variables set here will be set automatically when system starts. 
 
 # /etc/hosts
-If you don't have a DNS Server, you need to rely on configuring hosts file to allow hadoop communicate servers with host names. To display  host name for local machine, use command,
+If you don't have a DNS Server, you need to configure hosts file to allow hadoop communicate servers with host names. You copy of hosts file needs to exists on every nodes. Because Map and Reduce process will requires communicates between slave nodes. To display host name for local machine, use command,
 
     hostnamectl
     
