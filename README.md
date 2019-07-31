@@ -141,7 +141,7 @@ For logs,
 
 For data nodes,
 
-* [java.net.BindException: Problem binding to [0.0.0.0:50010] java.net.BindException](https://community.hortonworks.com/questions/50261/data-node-down-javanetbindexception-address-alread.html)
+* [java.net.BindException: Problem binding to [0.0.0.0:50010] java.net.BindException](https://community.hortonworks.com/questions/50261/data-node-down-javanetbindexception-address-alread.html) - If the solutions doesn't work, try restart your phyiscal node server and try again. 
 * [All specified directories are failed to load](https://stackoverflow.com/questions/45142320/hadoop-exception-all-specified-directories-are-failed-to-load)
 * [Datanode not starts correctly
 ](https://stackoverflow.com/questions/22316187/datanode-not-starts-correctly)
