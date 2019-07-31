@@ -1,5 +1,5 @@
 # Hadoop Cluster Setup
-This article walks you through setting up Hadoop 2.7.2 on Ubuntu. It is for people who is looking for fast installation solution on non-docker environment. For learning purpose, it doesn't involve HA architecture discussion. 
+This article walks you through setting up Hadoop 2.7.2 in fully distributed mode on Ubuntu. It is for people who is looking for fast installation solution on non-docker environment. For learning purpose, it doesn't involve HA architecture discussion. 
 
 # Cluster Detail
 * [Hadoop 2.7.2](https://github.com/apache/hadoop/releases/tag/rel%2Frelease-2.7.2)
