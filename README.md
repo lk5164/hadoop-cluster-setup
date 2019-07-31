@@ -4,6 +4,17 @@ This article walks you through setting up Hadoop 2.7.2 on Ubuntu. It is for peop
 # Cluster Detail
 * [Hadoop 2.7.2](https://github.com/apache/hadoop/releases/tag/rel%2Frelease-2.7.2)
 * [Ubuntu 18.04.2 LTS](http://releases.ubuntu.com/18.04/)
+
+The general architecture is as follow.
+
+    hadoop-master:            hadoop-slave1:       hadoop-slave2:      hadoop-slave3:      ....
+        | namenode              | datanode              | datanode          | datanode
+        | resourcemanager       | nodemanager           | nodemanager       | nodemanager
+        | datanode
+        | proxyserver
+        | nodemanager
+        | historyserver
+        
 ## System Prerequisites
 Use lsb_release -a command to check your ubuntu version.
 
