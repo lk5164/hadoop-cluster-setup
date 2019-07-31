@@ -63,6 +63,15 @@ After adding a new slave record, use
     hdfs dfsadmin -refreshNodes
     
 to allow hdfs discover. 
+## Name Node Formatting
+If everything configures correctly, you can start formatting name node which is the last step before starting hadoop.
+
+    hdfs namenode -format
+    
+According to Hadoop website,
+
+    -format [-clusterid cid]	Formats the specified NameNode. It starts the NameNode, formats it and then shut it down. Will throw NameNodeFormatException if name dir already exist and if reformat is disabled for cluster.
+    
 ## HDFS Trouble Shooting
     hdfs dfsadmin -report
 # Reference
