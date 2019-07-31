@@ -28,14 +28,19 @@ Before starting hadoop installation, sudo group user needs to be created. Use fo
 Next, a JDK and SSH needs to be installed and setup. 
 * [Java 8 JDK Installation](jdk/README.md)
 * [SSH Setup](.ssh/README.md)
+* [Host Names Setup](hosts/README.md)
 
+## Core Configurations
 Switch to hadoop user and create folders for name node, data node and logs. 
 
     mkdir -p ~/hdfs/namenode && \ 
         mkdir -p ~/hdfs/datanode && \
         mkdir $HADOOP_HOME/logs
-        
-## Core Configurations
+
+I would recommend setting above folders in a place where can be accessed by hadoop user. Otherwise you need to manually set folder privilege. 
+    
+    sudo chown -R hadoop [folder name]
+    
 Replace with configurations files under hadoop folder with root user.
 
     mv hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
@@ -46,10 +51,20 @@ Replace with configurations files under hadoop folder with root user.
     mv yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
     mv slaves $HADOOP_HOME/etc/hadoop/slaves
     
-## Environment Configurations
 ## Slave Configurations
+$HADOOP_HOME/etc/hadoop/slaves file contains slave server configurations. It is a plain text file with slave host names or IP address. If you install the master hadoop node with root account. You may want to specify user name in slave file. E.g., 
+
+    hadoop@hadoop-slave1
+    hadoop@hadoop-slave2
+    ...
+
+After adding a new slave record, use 
+
+    hdfs dfsadmin -refreshNodes
+    
+to allow hdfs discover. 
 ## HDFS Trouble Shooting
-    hadoop dfsadmin -report
+    hdfs dfsadmin -report
 # Reference
 [Cluster Setup](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
