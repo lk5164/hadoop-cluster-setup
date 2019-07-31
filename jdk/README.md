@@ -1,5 +1,5 @@
 # JAVA 8 JDK Installation
-Now Java 8 is not the default version, so I choose openjdk version which is still free. 
+Now Java 8 is not the default version, so add openjdk to apt repository. 
 
     add-apt-repository ppa:webupd8team/java
     
