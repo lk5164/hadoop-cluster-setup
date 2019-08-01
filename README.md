@@ -5,15 +5,13 @@ This article walks you through setting up Hadoop 2.7.2 in fully distributed mode
 * [Hadoop 2.7.2](https://github.com/apache/hadoop/releases/tag/rel%2Frelease-2.7.2)
 * [Ubuntu 18.04.2 LTS](http://releases.ubuntu.com/18.04/)
 
-The general architecture is as follow.
+A general architecture for 5 nodes is as follow.
 
-    hadoop-master:            hadoop-slave1:       hadoop-slave2:      hadoop-slave3:      ....
-        | namenode              | datanode              | datanode          | datanode
-        | resourcemanager       | nodemanager           | nodemanager       | nodemanager
-        | datanode
-        | proxyserver
-        | nodemanager
-        | historyserver
+    hadoop-master:            hadoop-slave1:       hadoop-slave2:      hadoop-slave3:      hadoop-slave4:
+        | namenode              | namenode              | datanode          | datanode        | datanode
+        | resourcemanager       | resourcemanager       | nodemanager       | nodemanager     | nodemanager
+        | nodemanager           | nodemanager           | journalnode       | journalnode     | journalnode
+        | zkfc                  | zkfc                  | zk                | zk              | zk
         
 ## System Prerequisites
 Use lsb_release -a command to check your ubuntu version.
