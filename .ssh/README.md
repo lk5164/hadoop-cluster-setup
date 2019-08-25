@@ -1,6 +1,6 @@
 # SSH key management
 
-    $: ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \\
+    $: ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 Copy config file to .ssh folder. 
